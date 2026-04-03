@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nya ägaren vill bygga kärnkraftverk på Jungfruholmen | Mitt i</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.7;
+  }
+
+  /* Header */
+  .site-header {
+    background: #fff;
+    border-bottom: 3px solid #e30613;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .site-header .inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-header .logo {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #e30613;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+  .site-header .logo span {
+    color: #1a1a1a;
+  }
+  .site-header .section-label {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e30613;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Article */
+  .article-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .article-meta {
+    padding: 24px 0 8px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+  }
+  .article-meta .dept {
+    color: #e30613;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  h1.headline {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    margin: 12px 0 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .ingress {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* Hero image */
+  .hero-image {
+    margin: 0 -20px 24px;
+  }
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+  .hero-image .caption {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    color: #666;
+    padding: 8px 20px 0;
+    line-height: 1.4;
+  }
+  .hero-image .caption .photo-credit {
+    color: #999;
+  }
+
+  /* Body text */
+  .article-body p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+  }
+  .article-body h3 {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: #1a1a1a;
+  }
+
+  /* Inline images */
+  .article-image {
+    margin: 28px -20px;
+  }
+  .article-image img {
+    width: 100%;
+    display: block;
+  }
+  .article-image .caption {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    color: #666;
+    padding: 8px 20px 0;
+    line-height: 1.4;
+  }
+  .article-image .caption .photo-credit {
+    color: #999;
+  }
+
+  /* Fact box */
+  .fact-box {
+    background: #fafafa;
+    border-left: 4px solid #e30613;
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-size: 0.95rem;
+  }
+  .fact-box h4 {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .fact-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .fact-box p:last-child {
+    margin-bottom: 0;
+  }
+  .fact-box .source {
+    font-style: italic;
+    color: #888;
+  }
+
+  /* Quote */
+  .pull-quote {
+    border-top: 2px solid #e30613;
+    border-bottom: 2px solid #e30613;
+    padding: 20px 0;
+    margin: 32px 0;
+    text-align: center;
+  }
+  .pull-quote p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.5;
+  }
+  .pull-quote .attribution {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 8px;
+    font-style: normal;
+  }
+
+  /* Byline */
+  .byline {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+  }
+  .byline .name {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .byline .contact {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* Tags */
+  .article-tags {
+    margin: 28px 0 48px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .article-tags a {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    background: #eee;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .site-footer {
+    background: #1a1a1a;
+    color: #999;
+    padding: 32px 20px;
+    text-align: center;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    h1.headline { font-size: 1.6rem; }
+    .ingress { font-size: 1.05rem; }
+    .article-body p { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="#">mitt <span>i</span></a>
+    <span class="section-label">Sollentuna</span>
+  </div>
+</header>
+
+<article class="article-wrapper">
+
+  <div class="article-meta">
+    <div class="dept">Nyheter</div>
+    <time>2021-10-01 06:20</time>
+  </div>
+
+  <h1 class="headline">Nya ägaren vill bygga kärnkraftverk på Jungfruholmen</h1>
+
+  <p class="ingress">Den privata ön Jungfruholmen såldes i mitten av juni efter att ha varit i samma familjs ägo sedan 1975. Och den nye ägaren har stora planer för den lilla ön mitt i Edsviken &ndash; han vill uppföra ett så kallat minireaktorkraftverk.</p>
+
+  <div class="hero-image">
+    <img src="images/image1.webp" alt="Jungfruholmen sedd från vattnet. Snart kan en liten reaktorkupol sticka upp bland trädtopparna.">
+    <div class="caption">Kärnkraftsö. Jungfruholmen sedd från vattnet. Snart kan en liten reaktorkupol sticka upp bland trädtopparna, om den nye ägaren får som han vill. <span class="photo-credit">Foto: Stefan Källstigen</span></div>
+  </div>
+
+  <div class="article-body">
+
+    <p>Slutpriset för Jungfruholmen blev 14 350 000 kronor. Mycket pengar för de flesta men inte för den nye ägaren &ndash; Joel Jakobsson som är en av grundarna bakom fintechbolaget Trustly.</p>
+
+    <p>Under de drygt 40 år som förre ägaren hade Jungfruholmen hände inte mycket på ön som ligger bara 50 meter från båtbryggan vid Segeludden.</p>
+
+    <p>Nye ägaren vill dock göra en närmast total makeover av de 2 280 kvadratmetrarna. Inte med bar och badtunnor, utan med ett blykylt minireaktorkraftverk från det svenska kärnkraftsbolaget Blykalla.</p>
+
+    <p>I dag finns bara ett hus på ön, byggt 1935 och 149 kvadratmeter stort, och ett uthus på 4 kvadratmeter.</p>
+
+    <p>Joel Jakobsson vill bygga om uthuset till kontrollrum för reaktorn, och uppföra en 30 kvadratmeter stor reaktorbyggnad samt ett 20 kvadratmeter stort besökscentrum där grannar och allmänhet kan lära sig om kärnkraft.</p>
+
+    <p>Dessutom ingår en flytbrygga på 4x12 meter på öns östra sida för att ta emot bränsletransporter, en pergola, och en badtunna som värms direkt av spillvärme från reaktorn.</p>
+
+    <div class="article-image">
+      <img src="images/image2.webp" alt="Satellitbild över Jungfruholmen i Edsviken.">
+      <div class="caption">Nära fastlandet. Jungfruholmen ligger bara ett femtiotal meter från båtbryggan vid Segeludden. Strålsäkerhetsmyndigheten har uttryckt viss oro över närheten till bostadsbebyggelsen. <span class="photo-credit">Satellitbild: Google Maps</span></div>
+    </div>
+
+    <h3>Vill leverera el till hela Sollentuna</h3>
+
+    <p>Enligt de bygghandlingar som har skickats in till Sollentuna kommun planerar Jakobsson att installera en av Blykallas så kallade SEALER-reaktorer &ndash; en blykyld snabbrektor som kan leverera upp till 3 megawatt elektricitet.</p>
+
+    <p>&ndash; Det räcker för att försörja hela Edsviken med grön el, och det blir lite över till resten av Sollentuna också, sa Joel Jakobsson i ett sällsynt uttalande till Mitt i.</p>
+
+    <p>&ndash; Jag tyckte att ön behövde en USP. Alla har badtunnor nuförtiden. Men ett eget kärnkraftverk? Det har ingen.</p>
+
+    <div class="pull-quote">
+      <p>&ldquo;Alla har badtunnor nuförtiden. Men ett eget kärnkraftverk? Det har ingen.&rdquo;</p>
+      <div class="attribution">Joel Jakobsson, ägare av Jungfruholmen</div>
+    </div>
+
+    <p>Men det är långt ifrån självklart att idéerna kommer att kunna förverkligas då hela området omfattas av strandskydd &ndash; och, i det här fallet, även kärnsäkerhetslagstiftning.</p>
+
+    <p>En ansökan om dispens handläggs just nu av avdelningen för miljö- och hälsoskydd i Sollentuna.</p>
+
+    <p>&ndash; Vi har handlagt många ärenden genom åren. Altaner. Bryggor. Bastur. Men en kärnreaktor? Det var en ny en, säger Katarina Tittelbach, miljöhandläggaren som har hand om ärendet.</p>
+
+    <p>&ndash; Strandskydd är till för att skydda växter och djur och allmänheten. Jag är inte helt säker på hur en blykyld reaktor påverkar det lokala ekosystemet. Jag måste höra med andra instanser i kommunen, och förmodligen även Strålsäkerhetsmyndigheten. Det här ligger lite utanför mitt vanliga kompetensområde, ska jag ärligt säga.</p>
+
+    <div class="article-image">
+      <img src="images/image3.webp" alt="Ankomstbryggan på Jungfruholmens södra sida.">
+      <div class="caption">Ankomstbryggan. Här på öns södra sida planeras för en trappa upp från bryggan till kontrollrummet, och till vänster syns platsen där reaktorbyggnaden ska uppföras. <span class="photo-credit">Foto: Stefan Källstigen</span></div>
+    </div>
+
+    <h3>Inte omöjligt ur kulturmiljösynpunkt</h3>
+
+    <p>Hittills har hon fått svar från kommunantikvarie Olof Svanberg, som yttrar sig då området även är k-märkt. Svanberg skriver i ett mejl att han inte ser &ldquo;att de föreslagna åtgärderna är omöjliga ur kulturmiljösynpunkt, så länge reaktorkupolen hålls under trädtoppsnivå och utförs i en färg som harmoniserar med den omgivande skärgårdsmiljön. Falurött skulle vara att föredra.&rdquo;</p>
+
+    <h3>Vill ha kommunalt VA &ndash; och elnät</h3>
+
+    <p>Nye ägaren vill också ordna kommunalt vatten och avlopp, samt anslutning till elnätet &ndash; det senare för att kunna leverera överskottsel tillbaka till fastlandet. Jungfruholmen ligger utanför Seom:s verksamhetsområde så ägaren måste själv handla upp sjöledningar och elkablar &ndash; och sådana kontakter har redan tagits.</p>
+
+    <p>&ndash; Vi ser egentligen inga hinder med vatten och avlopp, men elnätsanslutningen är lite speciell. Vi brukar inte ta emot el från privata öar. Det är en ny situation, meddelar Seom i ett skriftligt uttalande.</p>
+
+    <p>Innan eventuell dispens från strandskydd är beviljad får ingenting göras på Jungfruholmen.</p>
+
+    <p>&ndash; Nej, de får inte fälla ett enda träd. Och de får absolut inte starta en kärnreaktor. De måste ha dispens först, säger Katarina Tittelbach.</p>
+
+    <div class="article-image">
+      <img src="images/image4.webp" alt="Västra sidan av Jungfruholmen.">
+      <div class="caption">Västra sidan. Den sida av Jungfruholmen som vetter mot båtbryggan vid Segeludden. Här planeras en sandstrand som enligt ansökan ska &ldquo;fungera som evakueringsyta vid eventuella driftstörningar&rdquo;. <span class="photo-credit">Foto: Stefan Källstigen</span></div>
+    </div>
+
+    <h3>&ldquo;Vi inväntar svar&rdquo;</h3>
+
+    <p>Enligt en granne som bor på fastlandet invid Edsviken har ett mystiskt glödande sken synts från ön nattetid.</p>
+
+    <p>&ndash; Det var nog bara Joel som testade julbelysningen, tror jag. Eller hoppas jag, säger grannen som vill vara anonym.</p>
+
+    <p>Sofia Mazzulli på firman Stylingbolaget, som har anlitats av ägaren för att hålla i projektet, förnekar emellertid att omgörningen av ön redan skulle ha påbörjats.</p>
+
+    <p>&ndash; Vi inväntar svar och ser vad det blir innan vi gör något. Men jag kan säga att &ldquo;Styling&rdquo; i Stylingbolaget inte brukar syfta på uranstavar. Det här är nytt för oss också, säger Sofia Mazzulli.</p>
+
+    <p>Blykalla har inte svarat på Mitt i:s frågor om huruvida en SEALER-reaktor överhuvudtaget kan placeras på en ö som är 2 280 kvadratmeter stor.</p>
+
+    <p>&ndash; Det blir tight, men tekniskt sett är det möjligt, sa en anonym källa inom bolaget. Det svåra är inte fysiken. Det svåra är strandskyddsdispensen.</p>
+
+  </div>
+
+  <div class="fact-box">
+    <h4>Fakta: Blykalla och SEALER-reaktorn</h4>
+    <p>Blykalla är ett svenskt kärnkraftsbolag som utvecklar SEALER (Swedish Advanced Lead Reactor), en liten blykyld kärnreaktor.</p>
+    <p>Reaktorn är designad för att vara säker, kompakt och kunna placeras på avlägsna platser &ndash; men kanske inte riktigt så avlägsna som en privat ö i Edsviken.</p>
+    <p>En SEALER-reaktor kan leverera upp till 3 MW elektricitet och har en livslängd på cirka 30 år utan bränslebyte.</p>
+    <p>Strålsäkerhetsmyndigheten och regeringen måste godkänna alla nya kärnkraftsanläggningar i Sverige. Att kommunens miljöhandläggare &ldquo;måste kolla med Strålsäkerhetsmyndigheten&rdquo; är en historisk underdrift av processens komplexitet.</p>
+    <p class="source">Källa: Blykalla.se, Strålsäkerhetsmyndigheten</p>
+  </div>
+
+  <div class="pull-quote">
+    <p>&ldquo;De får inte fälla ett enda träd, och de får absolut inte starta en kärnreaktor. De måste ha dispens först.&rdquo;</p>
+    <div class="attribution">Katarina Tittelbach, miljöhandläggare, Sollentuna kommun</div>
+  </div>
+
+  <div class="byline">
+    <div class="name">Tomas Stark</div>
+    <div class="contact">tomas.stark@mitti.se</div>
+    <div class="contact">070-6025483</div>
+  </div>
+
+  <div class="article-tags">
+    <a href="#">Nyheter</a>
+    <a href="#">Sollentuna</a>
+    <a href="#">Kärnkraft</a>
+    <a href="#">Blykalla</a>
+    <a href="#">Jungfruholmen</a>
+  </div>
+
+</article>
+
+<footer class="site-footer">
+  mitt i Stockholm &copy; 2021
+</footer>
+
+</body>
+</html>
